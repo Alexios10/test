@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Test</title>
+  </head>
+  <body>
+    <input id="input-text" type="text" />
+    <button id="btn">Klikk her</button>
+    <div
+      style="margin-top: 10%; display: flex; flex-direction: column"
+      class="output"
+    ></div>
+
+    <script type="module">
+      const textInput = document.querySelector("#input-text");
+      const btn = document.querySelector("#btn");
+      const output = document.querySelector(".output");
+
+      import { Products } from "/data.js";
+      // How to remove the "," ?
+      // const productItem = Products.map((product) => {
+      //   return `<div class="PN">${product.name}</div>
+      //           <div class="PP">${product.price}</div>`;
+      // });
+
+      for (let i = 0; i < Products.length; i++) {
+        output.innerHTML += `<div style="margin-bottom:5px">${Products[i].name}</div>
+          <div style="margin-bottom:10px">${Products[i].price}</div>`;
+      }
+
+      // function showRandomName(e) {
+      //   e.preventDefault;
+      //   let names = ["sattar", "moa", "hussein"];
+
+      //   let rnIdx = Math.floor(Math.random() * names.length);
+
+      //   let randNR = names[rnIdx];
+
+      //   output.innerHTML = randNR;
+      // }
+
+      // btn.onclick = showRandomName;
+
+      // let arr = [];
+      // arr.name = "sattar";
+      // arr.age = 32;
+      // console.log(arr);
+    </script>
+  </body>
+</html>
