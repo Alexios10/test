@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input id="text-input" type="text" value="" placeholder="add todo" />
+      <button id="add-btn">Add</button>
+      <button id="remove-btn">Remove item</button>
+      <div class="output-div"></div>
+    </div>
+
+    <script>
+      let textInput = document.querySelector("#text-input");
+      let addBtn = document.querySelector("#add-btn");
+      let removeBtn = document.querySelector("#remove-btn");
+      let outputDiv = document.querySelector(".output-div");
+
+      function addItem() {
+        let inputValue = textInput.value;
+        outputDiv.innerHTML += `<ul><li>${inputValue}</li></ul>`;
+        textInput.value = "";
+      }
+
+      function removeItem() {
+        outputDiv.innerHTML;
+      }
+
+      addBtn.onclick = addItem;
+      removeBtn.onclick = removeItem;
+    </script>
+  </body>
+</html>
