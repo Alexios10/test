@@ -7,7 +7,16 @@ let restartBtn = document.querySelector(".restart-btn");
 let styles = document.createElement("style");
 
 document.body.appendChild(styles);
-styles.innerHTML = `
+
+let raceInProgress = false;
+
+function carRace() {
+  if (!raceInProgress) {
+    raceInProgress = true;
+
+    // styles.innerHTML = "";
+
+    styles.innerHTML = `
         @keyframes moveCar {
           from {
             transform: translateX(0px);
@@ -26,20 +35,21 @@ styles.innerHTML = `
         .car-animation3 {
           animation: moveCar linear ${Math.random() * 30}s  forwards;
         }
-
       `;
-function carRace() {
-  car1.classList.add("car-animation1");
-  car2.classList.add("car-animation2");
-  car3.classList.add("car-animation3");
+    car1.classList.add("car-animation1");
+    car2.classList.add("car-animation2");
+    car3.classList.add("car-animation3");
+  }
 }
 
 function restart() {
+  raceInProgress = false;
+
   car1.classList.remove("car-animation1");
   car2.classList.remove("car-animation2");
   car3.classList.remove("car-animation3");
-  location.reload();
 }
 
 startBtn.onclick = carRace;
+
 restartBtn.onclick = restart;
