@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+.start-line {
+  position: relative;
+  width: 10px;
+  height: 500px;
+  margin-left: 10rem;
+  margin-top: 5rem;
+  background: #000;
+}
+
+.car1 {
+  position: absolute;
+  background: url(assets/car1.png) no-repeat center / cover;
+  width: 150px;
+  height: 90px;
+  margin-top: 10rem;
+}
+
+.car2 {
+  position: absolute;
+  background: url(assets/car2.png) no-repeat center / cover;
+  width: 150px;
+  height: 100px;
+  margin-top: 2rem;
+}
+
+.car3 {
+  position: absolute;
+  background: url(assets/car3.png) no-repeat center / cover;
+  width: 170px;
+  height: 100px;
+  margin-top: 20rem;
+}
+
+.finish-line {
+  width: 10px;
+  height: 500px;
+  margin-left: 87rem;
+  background: #000;
+}
