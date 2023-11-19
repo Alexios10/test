@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  animation: imageSlider 15s linear infinite;
+}
+
+@keyframes imageSlider {
+  0%,
+  20% {
+    background: url(assets/bg-img3.jpg) no-repeat center / cover fixed;
+  }
+  25%,
+  55% {
+    background: url(assets/bg-img1.jpg) no-repeat center / cover fixed;
+  }
+
+  60%,
+  90% {
+    background: url(assets/bg-img2.jpg) no-repeat center / cover fixed;
+  }
+
+  95%,
+  100% {
+    background: url(assets/bg-img3.jpg) no-repeat center / cover fixed;
+  }
+}
+
+#intro-music {
+  z-index: -10;
+}
