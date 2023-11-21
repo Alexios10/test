@@ -95,25 +95,25 @@ body {
   transform: scale(1.1);
   transition: all 0.2s ease-in-out;
   border: 2px solid #9400d3;
-  animation: btnBorderColor 5s linear infinite;
+  animation: btnBorderColor 3s linear infinite;
 }
 
 @keyframes btnBorderColor {
   0% {
     /* border-color: #9400d3; */
-    box-shadow: 0 0 5px 5px #9400d3;
+    box-shadow: 0 0 3px 3px #9400d3;
   }
   50% {
     /* border-color: #ff0000; */
-    box-shadow: 0 0 5px 5px #ff0000;
+    box-shadow: 0 0 3px 3px #ff0000;
   }
   80% {
     /* border-color: #64ccde; */
-    box-shadow: 0 0 5px 5px #64ccde;
+    box-shadow: 0 0 3px 3px #64ccde;
   }
   100% {
     /* border-color: #9400d3; */
-    box-shadow: 0 0 5px 5px #9400d3;
+    box-shadow: 0 0 3px 3px #9400d3;
   }
 }
 
